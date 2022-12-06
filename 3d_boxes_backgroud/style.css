@@ -38,5 +38,100 @@ body {
 .boxes{
     width: 500px;
     height: 500px;
-    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    /* background-color: red; */
+    transition-delay: 0.4s ease;
+}
+
+.boxes.big {
+    width: 600px;
+    height: 600px;
+}
+
+.boxes.big .box {
+    transform: rotateZ(360deg);
+}
+
+.box{
+    background-image: url('./giphy.gif');
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    position: relative;
+    height: 125px;
+    width: 125px;
+    transition: 0.4s ease;
+}
+
+.box::after{
+    content: '';
+    background-color: #f6e58d;
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    width: 15px;
+    height: 100%;
+    transform: skewY(45deg);
+}
+
+.box::before{
+    content: '';
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    background-color: #f9ca24;
+    transform: skew(45deg);
+}
+
+.box:nth-child(1){
+    background-position: 0px 0px;
+}
+.box:nth-child(2){
+    background-position: -125px 0px;
+}
+.box:nth-child(3){
+    background-position: -250px 0px;
+}
+.box:nth-child(4){
+    background-position: -375px 0px;
+}
+.box:nth-child(5){
+    background-position: 0px -125px;
+}
+.box:nth-child(6){
+    background-position: -125px -125px;
+}
+.box:nth-child(7){
+    background-position: -250px -125px;
+}
+.box:nth-child(8){
+    background-position: -375px -125px;
+}
+.box:nth-child(9){
+    background-position: 0px -250px;
+}
+.box:nth-child(10){
+    background-position: -125px -250px;
+}
+.box:nth-child(11){
+    background-position: -250px -250px;
+}
+.box:nth-child(12){
+    background-position: -375px -250px;
+}
+.box:nth-child(13){
+    background-position: 0px -375px;
+}
+.box:nth-child(14){
+    background-position: -125px -375px;
+}
+.box:nth-child(15){
+    background-position: -250px -375px;
+}
+.box:nth-child(16){
+    background-position: -375px -375px;
 }
